@@ -11,32 +11,107 @@
 </head>
 
 <body>
+  <div id="primera">
+    <div id="btn1">
+      <button type="button" class="btn btn-link">Administración</button>
+    </div>
+    <div class="text-center" id="logo">
+    <img src="assets/img/ifblanco.png" class="rounded" alt="...">
+    </div>
+    <div class="text-center" id="btn2">
+      <button type="button" class="btn btn-dark btn-lg ">REGISTRATE AQUÍ</button>
+    </div>
+  </div>
+
+  <!--login-->
+    <div id="login" class="text-center">
+      <form>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Nombre</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="nombre" placeholder="Nombre Completo ...">
+          </div>
+        </div>
+         <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Rut</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="rut" placeholder="Ingrese su rut">
+          </div>
+        </div>
+         <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="mail" placeholder="Ingrese su email">
+          </div>
+        </div>
+      </form>
+      <div class="dropdown">
+        <p>Lugar al que visita    <button class="btn btn-secondary dropdown-toggle"
+          type="button" id="dropdownMenu1" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Instalaciones
+        </button></p>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <a class="dropdown-item" href="#!">Robotics Labs</a>
+          <a class="dropdown-item" href="#!">Fabrica de medios</a>
+          <a class="dropdown-item" href="#!">Aguas Lab</a>
+          <a class="dropdown-item" href="#!">Laboratoria</a>
+          <a class="dropdown-item" href="#!">Galpon Barniz</a>
+          <a class="dropdown-item" href="#!">Fundacion Mustakis</a>
+          <a class="dropdown-item" href="#!">Administracion If</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <p>Motivo Visita     <button class="btn btn-secondary dropdown-toggle"
+          type="button" id="dropdownMenu1" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Seleccione
+        </button></p>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <a class="dropdown-item" href="#!">Empleado</a>
+          <a class="dropdown-item" href="#!">Estudiante</a>
+          <a class="dropdown-item" href="#!">Solo Visita</a>
+          <a class="dropdown-item" href="#!">otro motivo</a>
+        </div>
+      </div>
+       <div class="form-group row">
+          <div class="col-sm-10 offset-sm-2">
+            <button type="submit" class="btn btn-dark">Sign in</button>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+  <!--
   <div id="login">
     <form>
       <div class="form-group row">
-        <label for="inputEmail3" class="col-sm-2  col-form-label">Nombre</label>
+        <label class="col-sm-2  col-form-label">Email</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="email" placeholder="Nombre">
+          <input type="email" class="form-control" id="registryEmail" placeholder="Email">
         </div>
       </div>
       <div class="form-group row">
-        <label for="inputEmail3" class="col-sm-2  col-form-label">Contraseña</label>
+        <label class="col-sm-2  col-form-label">Contraseña</label>
         <div class="col-sm-10">
-          <input type="password" class="form-control" id="password" placeholder="Contraseña">
+          <input type="password" class="form-control" id="registryPassword" placeholder="Contraseña">
         </div>
-      <div class="form-group row">
+        <div class="form-group row">
         <div class="col-sm-10 offset-sm-2">
-        <button type="submit" class="btn btn-primary" id="singIn">Sign in</button>
+        <button type="submit" class="btn btn-primary" id="btnregister">regitrate</button>
         </div>
-      </div>
-      <div class="form-group row">
+         <div class="form-group row">
         <div class="col-sm-10 offset-sm-2">
-        <button type="submit" class="btn btn-primary" id="crear">Create</button>
+        <button type="submit" class="btn btn-primary" id="btnsingin">entrar</button>
         </div>
       </div>
     </form>
   </div>
-<!-- inputs feos para probar firestore -->
+ inputs feos para probar firestore 
 <input type="text" id="nombre" placeholder="Nombre" class="form-control my-3">
 <input type="text" id="apellido" placeholder="Apellido" class="form-control my-3">
 <input type="text" id="rut" placeholder="RUT" class="form-control my-3">
@@ -61,7 +136,7 @@
 
   </select>
   
-<!-- <input type="text" id="destino" placeholder="Empresa que visita" class="form-control my-3"> -->
+//<input type="text" id="destino" placeholder="Empresa que visita" class="form-control my-3"> 
 <button class="btn btn-info" onclick="guardar()" id="boton">Entrar</button>
 
 <table id="table" class="table my-3">
@@ -77,7 +152,7 @@
 		</tbody>
 	</table>
 
-
+-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
