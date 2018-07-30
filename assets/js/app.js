@@ -1,4 +1,5 @@
 //secion para admi REGISTRADO
+
 const btnSingIn = document.getElementById('singIn').addEventListener('click', () => {
   let validarNombre = nombre.value;
   let valiarPassword = password.value;
