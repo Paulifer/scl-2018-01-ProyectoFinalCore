@@ -10,3 +10,9 @@
   color: #010101;
 
 }
+.divDisplayNone{
+	display: none;
+}
+.divDisplayBlock{
+	display: block;
+}

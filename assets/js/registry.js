@@ -54,6 +54,23 @@ db.collection("visitors").onSnapshot((querySnapshot) => {
 
     });
 });
+//boton registro
+const btnregistro = document.getElementById('btnRegistry').addEventListener('click', ()=>{
+  primera.classList.remove('divDisplayBlock');
+  primera.classList.add('divDisplayNone');
+  login.classList.remove('divDisplayNone');
+  login.classList.add('divDisplayBlock');
+})
+
+const btnAdmi = document.getElementById('btn1').addEventListener('click', ()=>{
+  primera.classList.remove('divDisplayBlock');
+  primera.classList.add('divDisplayNone');
+  administracion.classList.remove('divDisplayNone');
+  administracion.classList.add('divDisplayBlock');
+})
+
+
+
 //crear registro para admi
 const btnIniciar = document.getElementById('btnregister').addEventListener('click', () => {
 
