@@ -54,7 +54,7 @@ db.collection("visitors").onSnapshot((querySnapshot) => {
 
     });
 });
-//boton registro
+//botones 
 const btnregistro = document.getElementById('btnRegistry').addEventListener('click', ()=>{
   primera.classList.remove('divDisplayBlock');
   primera.classList.add('divDisplayNone');
@@ -67,6 +67,13 @@ const btnAdmi = document.getElementById('btn1').addEventListener('click', ()=>{
   primera.classList.add('divDisplayNone');
   administracion.classList.remove('divDisplayNone');
   administracion.classList.add('divDisplayBlock');
+})
+
+const btnOk = document.getElementById('btnOk').addEventListener('click', ()=>{
+  login.classList.remove('divDisplayBlock');
+  login.classList.add('divDisplayNone');
+  primera.classList.remove('divDisplayNone');
+  primera.classList.add('divDisplayBlock');
 })
 
 
