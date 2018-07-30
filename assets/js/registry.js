@@ -30,7 +30,7 @@ function guardar() {
       document.getElementById('rut').value = '';
       document.getElementById('email').value = '';
       document.getElementById('ocupacion').value = '';
-      document.getElementById('destino').value = '';
+      // document.getElementById('destino').value = '';
     })
     .catch(function (error) {
       console.error("Error adding document: ", error);
@@ -41,6 +41,7 @@ function guardar() {
 const tabla = document.getElementById('tabla');
 
 db.collection("visitors").onSnapshot((querySnapshot) => {
+  tabla.innerHTML = '';
   querySnapshot.forEach((doc) => {
       console.log(`${doc.id} => ${doc.data()}`);
       tabla.innerHTML += `
