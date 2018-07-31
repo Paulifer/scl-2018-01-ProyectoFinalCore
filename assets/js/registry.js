@@ -13,7 +13,7 @@ function guardar() {
   let destino = document.getElementById('destino').value;
   let rut = document.getElementById('rut').value;
   let patente = document.getElementById('patente').value;
-
+  //let img = document.getElementById('photo');
 
   db.collection("visitors").add({
     email: mail,
@@ -25,6 +25,7 @@ function guardar() {
     ocupacion: ocupacion,
     patente: patente,
     destino: destino
+    //foto: img
   })
     .then(function (docRef) {
       console.log("Document written with ID: ", docRef.id);
@@ -33,7 +34,8 @@ function guardar() {
       document.getElementById('rut').value = '';
       document.getElementById('email').value = '';
       document.getElementById('ocupacion').value = '';
-      // document.getElementById('destino').value = '';
+      document.getElementById('patente').value = '';
+      document.getElementById('photo').value = '';
     })
     .catch(function (error) {
       console.error("Error adding document: ", error);
@@ -53,6 +55,8 @@ db.collection("visitors").onSnapshot((querySnapshot) => {
             <td>${doc.data().first}</td>
             <td>${doc.data().last}</td>
             <td>${doc.data().destino}</td>
+            
+
           </tr>`
 
     });
