@@ -71,7 +71,7 @@ const btnAdmi = document.getElementById('btn1').addEventListener('click', ()=>{
   administracion.classList.add('divDisplayBlock');
 })
 
-const btnOk = document.getElementById('btnOk').addEventListener('click', ()=>{
+const btnOk = document.getElementById('boton').addEventListener('click', ()=>{
   login.classList.remove('divDisplayBlock');
   login.classList.add('divDisplayNone');
   primera.classList.remove('divDisplayNone');
@@ -80,8 +80,8 @@ const btnOk = document.getElementById('btnOk').addEventListener('click', ()=>{
 
 
 
-//crear registro para admi
-const btnIniciar = document.getElementById('btnregister').addEventListener('click', () => {
+/*//crear registro para admi
+const btnIniciar = document.getElementById('boton').addEventListener('click', () => {
 
   let emailRegistry = registryEmail.value;
   let passwordRegistry = registryPassword.value;
@@ -122,3 +122,6 @@ const btnSingIn = document.getElementById('btnsingin').addEventListener('click',
   console.log(validarMail);
   console.log(valiarPassword);
 })
+
+*/
+
