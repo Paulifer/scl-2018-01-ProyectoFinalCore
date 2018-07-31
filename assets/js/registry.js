@@ -14,23 +14,6 @@ function guardar() {
   let patente = document.getElementById('patente').value;
   //let img = document.getElementById('photo');
 
-  // intentando subir imagen a firestore
-
-  // Create a root reference
-  var storageRef = firebase.storage().ref();
-
-  // Create a reference to 'mountains.jpg'
-  var mountainsRef = storageRef.child('if-2.jpg');
-
-  // Create a reference to 'images/mountains.jpg'
-  var mountainImagesRef = storageRef.child('/Users/Niito/Documents/Projects/scl-2018-01-ProyectoFinalCore/assets/img/if-2.jpg');
-
-  // While the file names are the same, the references point to different files
-  mountainsRef.name === mountainImagesRef.name            // true
-  mountainsRef.fullPath === mountainImagesRef.fullPath    // false
-
-  // fin del intento
-
   db.collection("visitors").add({
     email: mail,
     first: nombre,
