@@ -73,3 +73,69 @@ db.collection("visitors").onSnapshot((querySnapshot) => {
 
     });
 });
+//botones 
+const btnregistro = document.getElementById('btnRegistry').addEventListener('click', ()=>{
+  primera.classList.remove('divDisplayBlock');
+  primera.classList.add('divDisplayNone');
+  login.classList.remove('divDisplayNone');
+  login.classList.add('divDisplayBlock');
+})
+
+const btnAdmi = document.getElementById('btn1').addEventListener('click', ()=>{
+  primera.classList.remove('divDisplayBlock');
+  primera.classList.add('divDisplayNone');
+  administracion.classList.remove('divDisplayNone');
+  administracion.classList.add('divDisplayBlock');
+})
+
+const btnOk = document.getElementById('btnOk').addEventListener('click', ()=>{
+  login.classList.remove('divDisplayBlock');
+  login.classList.add('divDisplayNone');
+  primera.classList.remove('divDisplayNone');
+  primera.classList.add('divDisplayBlock');
+})
+
+
+
+//crear registro para admi
+const btnIniciar = document.getElementById('btnregister').addEventListener('click', () => {
+
+  let emailRegistry = registryEmail.value;
+  let passwordRegistry = registryPassword.value;
+  console.log(emailRegistry);
+  console.log(passwordRegistry);
+  firebase.auth().createUserWithEmailAndPassword(emailRegistry, passwordRegistry)
+    .then(() => {
+      console.log(emailRegistry);
+    })
+    .catch((error) => {
+      let errorCode = error.code;
+      let errorMessage = error.message;
+      console.log(errorCode);
+      console.log(errorMessage);
+    });
+
+})
+
+//Iniciar seción usuario registrado
+const btnSingIn = document.getElementById('btnsingin').addEventListener('click', () => {
+  let validarMail = registryEmail.value;
+  let valiarPassword = registryPassword.value;
+  if (/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(validarMail)) {
+    firebase.auth().signInWithEmailAndPassword(validarMail, valiarPassword)
+      .then(() => {
+        console.log("usuarioExistente");
+      })
+      .catch(function (error) {
+        let errorCode = error.code;
+        let errorMessage = error.message;
+        console.log(errorCode);
+        console.log(errorMessage);
+      });
+    alert("correcto");
+  } else {
+    alert("incorrecto");
+  }
+  console.log(validarMail);
+  console.log(valiarPassword);
+})
