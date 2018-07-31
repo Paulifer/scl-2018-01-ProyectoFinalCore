@@ -14,9 +14,9 @@
  <!--.....................pagina de recepcion.................-->
  <div class="container formu">
     <div class="row justify-content-md-center">
-      <div class="col-md-auto">
-          <h3>Registro</h3>
-        <input type="text" id="nombre" placeholder="Nombre completo" class="form-control my-3" size="70%;">
+      <div class="col-ls-auto">
+          <h2>Registro</h2>
+        <input type="text" id="nombre" placeholder="Nombre completo" class="form-control my-3" size="90%;" style="margin-top: 30%;">
         <input type="text" id="rut" placeholder="RUT" class="form-control my-3">
         <input type="text" id="email" placeholder="Email" class="form-control my-3">
         <input type="text" id="ocupacion" placeholder="Ocupacion" class="form-control my-3">
@@ -38,42 +38,39 @@
             <option value="Tremenda">Tremenda</option>
             <option value="Ilegal">Ilegal</option>
         </select>
-        <input type="file" class="form-control-file" id="photo">
+        <!--sector de camara-->
+        <section id="camara">
+                <div class="col-ls-6 offset-ls-3">
+                  <button id="startbutton"> Tomar foto
+                    <i class="fas fa-camera"></i>
+                  </button>
+                </div>
+                <div class="col-md-6 offset-md-3">
+                  <video id="video"></video>
+                </div>
+                <div class="col-md-6 offset-md-3">
+                  <canvas id="canvas"></canvas>
+                </div>
+                  <div class="col-md-6 offset-md-3">
+                    <div id="photo"></div>
+                  </div>
           
-        <button class="btn btn-info" onclick="guardar()" id="boton">Entrar</button> 
+          </section>
+          <!--sector donde va boton de entrar-->
+          <button class="btn btn-info btn-dark" onclick="guardar()" id="boton">REGISTRARME</button>
     </div> 
     </div>
   </div>
 
-  <!--Logo del if-->
-  
-<!--
-<input type="text" id="nombre" placeholder="Nombre completo" class="form-control my-3">
-<input type="text" id="rut" placeholder="RUT" class="form-control my-3">
-<input type="text" id="email" placeholder="Email" class="form-control my-3">
-<input type="text" id="ocupacion" placeholder="Ocupacion" class="form-control my-3">
-<input type="text" id="patente" placeholder="Patente de tu auto" class="form-control my-3">  
-<select id="destino" class="custom-select">
-    <option selected>Empresa que visitas</option>
-    <option value="Visita">Visita</option>
-    <option value="Elestudio">Elestudio</option>
-    <option value="Robotics Labs">Robotics Labs</option>
-    <option value="FDM">Fábrica de medios</option>
-    <option value="Café altura">Café altura</option>
-    <option value="Laboratoria">Laboratoria</option>
-    <option value="Mustakis">Fundacion mustakis</option>
-    <option value="Husares">Destileria Husares</option>
-    <option value="Aguaslab">Aguaslab</option>
-    <option value="Wildproyectchile">Wildproyectchile</option>
-    <option value="Deseis">Deseis</option>
-    <option value="cdi">cdi</option>
-    <option value="Tremenda">Tremenda</option>
-    <option value="Ilegal">Ilegal</option>
-</select>
-<input type="file" class="form-control-file" id="photo">
-  
-<button class="btn btn-info" onclick="guardar()" id="boton">Entrar</button>-->
 
+  <!--Logo del if-->
+  <div class="container">
+        <div class="row"> 
+          <div class="col-ls-6">
+            <img src="assets/img/ifblanco.png" alt="" srcset="">
+          </div> 
+        </div>
+      </div>
 
 
 
