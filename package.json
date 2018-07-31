@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/nataliaLT/scl-2018-01-ProyectoFinalCore#readme",
   "dependencies": {
+    "firebase": "^5.3.0",
     "mailgun-js": "^0.20.0"
   }
 }
