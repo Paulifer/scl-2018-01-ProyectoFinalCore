@@ -103,3 +103,9 @@ Una modelo mental común para representar el desarrollo de productos es visualiz
 Para poder hacer envíos de email necesitas un servicio. Aquí te dejamos un acceso a una cuenta de Mandrill de Laboratoria para que la puedas utilizar en tu proyecto.
 
 Host: smtp.mandrillapp.com Port: 587 SMTP Username: Laboratoria.La SMTP Password: Yjbhl-WzBGJbqv5w5n-y9w
+
+Link para escuchar las entrevistas:
+https://drive.google.com/drive/folders/1csDiXwO2ek-UnYPi3RKvdKGH8sU8ta0q?usp=sharing
+
+Link para ver prototipo de alta fidelidad:
+https://www.figma.com/proto/feIwCpp40k7MJ3TIYqWSMg4o/recepcion?node-id=63%3A74&scaling=scale-down
