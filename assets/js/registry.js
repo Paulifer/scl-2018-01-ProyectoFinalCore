@@ -4,7 +4,6 @@ var db = firebase.firestore();
 // Agregar visitante
 function guardar() {
   let nombre = document.getElementById('nombre').value;
-  let apellido = document.getElementById('apellido').value;
   let d = new Date();
   let time = d.getHours() + ":" + d.getMinutes();
   let date = d.getDate() + "." + d.getMonth() + "." + d.getFullYear();
@@ -15,10 +14,26 @@ function guardar() {
   let patente = document.getElementById('patente').value;
   //let img = document.getElementById('photo');
 
+  // intentando subir imagen a firestore
+
+  // Create a root reference
+  var storageRef = firebase.storage().ref();
+
+  // Create a reference to 'mountains.jpg'
+  var mountainsRef = storageRef.child('if-2.jpg');
+
+  // Create a reference to 'images/mountains.jpg'
+  var mountainImagesRef = storageRef.child('/Users/Niito/Documents/Projects/scl-2018-01-ProyectoFinalCore/assets/img/if-2.jpg');
+
+  // While the file names are the same, the references point to different files
+  mountainsRef.name === mountainImagesRef.name            // true
+  mountainsRef.fullPath === mountainImagesRef.fullPath    // false
+
+  // fin del intento
+
   db.collection("visitors").add({
     email: mail,
     first: nombre,
-    last: apellido,
     date: date,
     time: time,
     rut: rut,
@@ -30,7 +45,6 @@ function guardar() {
     .then(function (docRef) {
       console.log("Document written with ID: ", docRef.id);
       document.getElementById('nombre').value = '';
-      document.getElementById('apellido').value = '';
       document.getElementById('rut').value = '';
       document.getElementById('email').value = '';
       document.getElementById('ocupacion').value = '';
@@ -52,11 +66,9 @@ db.collection("visitors").onSnapshot((querySnapshot) => {
       tabla.innerHTML += `
       <tr>
             <th scope="row">${doc.data().time}</th>
+            <td></td>
             <td>${doc.data().first}</td>
-            <td>${doc.data().last}</td>
             <td>${doc.data().destino}</td>
-            
-
           </tr>`
 
     });
