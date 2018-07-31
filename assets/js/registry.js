@@ -4,7 +4,6 @@ var db = firebase.firestore();
 // Agregar visitante
 function guardar() {
   let nombre = document.getElementById('nombre').value;
-  let apellido = document.getElementById('apellido').value;
   let d = new Date();
   let time = d.getHours() + ":" + d.getMinutes();
   let date = d.getDate() + "." + d.getMonth() + "." + d.getFullYear();
@@ -13,27 +12,27 @@ function guardar() {
   let destino = document.getElementById('destino').value;
   let rut = document.getElementById('rut').value;
   let patente = document.getElementById('patente').value;
-
+  //let img = document.getElementById('photo');
 
   db.collection("visitors").add({
     email: mail,
     first: nombre,
-    last: apellido,
     date: date,
     time: time,
     rut: rut,
     ocupacion: ocupacion,
     patente: patente,
     destino: destino
+    //foto: img
   })
     .then(function (docRef) {
       console.log("Document written with ID: ", docRef.id);
       document.getElementById('nombre').value = '';
-      document.getElementById('apellido').value = '';
       document.getElementById('rut').value = '';
       document.getElementById('email').value = '';
       document.getElementById('ocupacion').value = '';
-      // document.getElementById('destino').value = '';
+      document.getElementById('patente').value = '';
+      document.getElementById('photo').value = '';
     })
     .catch(function (error) {
       console.error("Error adding document: ", error);
@@ -50,8 +49,8 @@ db.collection("visitors").onSnapshot((querySnapshot) => {
       tabla.innerHTML += `
       <tr>
             <th scope="row">${doc.data().time}</th>
+            <td></td>
             <td>${doc.data().first}</td>
-            <td>${doc.data().last}</td>
             <td>${doc.data().destino}</td>
           </tr>`
 
