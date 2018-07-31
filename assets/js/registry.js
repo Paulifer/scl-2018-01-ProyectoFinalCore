@@ -12,6 +12,8 @@ function guardar() {
   let ocupacion = document.getElementById('ocupacion').value;
   let destino = document.getElementById('destino').value;
   let rut = document.getElementById('rut').value;
+  let patente = document.getElementById('patente').value;
+
 
   db.collection("visitors").add({
     email: mail,
@@ -21,6 +23,7 @@ function guardar() {
     time: time,
     rut: rut,
     ocupacion: ocupacion,
+    patente: patente,
     destino: destino
   })
     .then(function (docRef) {

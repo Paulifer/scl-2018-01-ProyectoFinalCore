@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-4.1.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+<<<<<<< HEAD:index.html
+  <div id="primera">
+    <div id="btn1">
+      <button type="button" class="btn btn-link">Administración</button>
+    </div>
+    <div class="text-center" id="logo">
+    <img src="assets/img/ifblanco.png" class="rounded" alt="...">
+    </div>
+    <div class="text-center" id="btn2">
+      <button type="button" id="btnRegistry" class="btn btn-dark btn-lg">REGISTRATE AQUÍ</button>
+    </div>
+  </div>
+
+  <!--login-->
+    <div id="login" class="text-center divDisplayNone">
+      <form>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Nombre</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="nombre" placeholder="Nombre Completo ...">
+          </div>
+        </div>
+         <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Rut</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="rut" placeholder="Ingrese su rut">
+          </div>
+        </div>
+         <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="mail" placeholder="Ingrese su email">
+          </div>
+        </div>
+      </form>
+      <div class="dropdown">
+        <p>Lugar al que visita    <button class="btn btn-secondary dropdown-toggle"
+          type="button" id="dropdownMenu1" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Instalaciones
+        </button></p>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <a class="dropdown-item" href="#!">Robotics Labs</a>
+          <a class="dropdown-item" href="#!">Fabrica de medios</a>
+          <a class="dropdown-item" href="#!">Aguas Lab</a>
+          <a class="dropdown-item" href="#!">Laboratoria</a>
+          <a class="dropdown-item" href="#!">Galpon Barniz</a>
+          <a class="dropdown-item" href="#!">Fundacion Mustakis</a>
+          <a class="dropdown-item" href="#!">Administracion If</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <p>Motivo Visita     <button class="btn btn-secondary dropdown-toggle"
+          type="button" id="dropdownMenu1" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Seleccione
+        </button></p>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <a class="dropdown-item" href="#!">Empleado</a>
+          <a class="dropdown-item" href="#!">Estudiante</a>
+          <a class="dropdown-item" href="#!">Solo Visita</a>
+          <a class="dropdown-item" href="#!">otro motivo</a>
+        </div>
+      </div>
+       <div class="form-group row">
+          <div class="col-sm-10 offset-sm-2">
+            <button type="submit" id="btnOk" class="btn btn-dark">REGISTRARME</button>
+          </div>
+        </div>
+    </div>
+
+    <div id="administracion" class="divDisplayNone">
+      <input type="text" id="nombre" placeholder="Nombre" class="form-control my-3">
+=======
+ <!--.....................pagina de recepcion.................-->
+<!-- inputs feos para probar firestore -->
+<input type="text" id="nombre" placeholder="Nombre" class="form-control my-3">
+>>>>>>> upstream/master:docs/index.html
+<input type="text" id="apellido" placeholder="Apellido" class="form-control my-3">
+<input type="text" id="rut" placeholder="RUT" class="form-control my-3">
+<input type="text" id="email" placeholder="Email" class="form-control my-3">
+<input type="text" id="ocupacion" placeholder="Ocupacion" class="form-control my-3"> 
+<select id="destino" class="custom-select">
+    <option selected>Empresa que visitas</option>
+    <option value="Elestudio">Elestudio</option>
+    <option value="Robotics Labs">Robotics Labs</option>
+    <option value="FDM">Fábrica de medios</option>
+    <option value="Café altura">Café altura</option>
+    <option value="Laboratoria">Laboratoria</option>
+    <option value="Mustakis">Fundacion mustakis</option>
+    <option value="Husares">Destileria Husares</option>
+    <option value="Aguaslab">Aguaslab</option>
+    <option value="Wildproyectchile">Wildproyectchile</option>
+    <option value="Deseis">Deseis</option>
+    <option value="cdi">cdi</option>
+    <option value="Tremenda">Tremenda</option>
+    <option value="Ilegal">Ilegal</option>
+
+
+  </select>
+  
+//<input type="text" id="destino" placeholder="Empresa que visita" class="form-control my-3"> 
+<button class="btn btn-info" onclick="guardar()" id="boton">Entrar</button>
+
+<table id="table" class="table my-3">
+    <thead>
+      <tr>
+        <th scope="col">Hora</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Destino</th>
+      </tr>
+    </thead>
+    <tbody id="tabla">
+    </tbody>
+  </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCFFYaWllrV-XpRraCD9QclXIcJpPyvT7U",
+            authDomain: "registro-de-visitantes-e1722.firebaseapp.com",
+            databaseURL: "https://registro-de-visitantes-e1722.firebaseio.com",
+            projectId: "registro-de-visitantes-e1722",
+            storageBucket: "",
+            messagingSenderId: "680909247747"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/registry.js"></script>
+</body>
+
+</html>
