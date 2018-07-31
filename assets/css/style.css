@@ -16,3 +16,7 @@
 .divDisplayBlock{
 	display: block;
 }
+
+#login{
+	text-align: center;
+}
