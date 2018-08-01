@@ -12,6 +12,7 @@
     navigator.webkitGetUserMedia ||
     navigator.mozGetUserMedia ||
     navigator.msGetUserMedia);
+  console.log('streaming');
 
   navigator.mediaDevices.getUserMedia(
     {
@@ -26,6 +27,7 @@
         video.src = vendorURL.createObjectURL(stream);
       }
       video.play();
+      console.log(navigator);
     },
     function (err) {
       console.log("An error occured! " + err);
@@ -49,6 +51,7 @@
     canvas.getContext('2d').drawImage(video, 0, 0, width, height);
     var data = canvas.toDataURL('image/png');
     photo.setAttribute('src', data);
+    console.log(data);
   }
 
   startbutton.addEventListener('click', function (ev) {
