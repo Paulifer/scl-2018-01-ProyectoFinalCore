@@ -83,23 +83,24 @@ db.collection("visitors").onSnapshot((querySnapshot) => {
 const btnregistro = document.getElementById('btnRegistry').addEventListener('click', ()=>{
   primera.classList.remove('divDisplayBlock');
   primera.classList.add('divDisplayNone');
-  recepcion.classList.remove('divDisplayNone');
-  recepcion.classList.add('divDisplayBlock');
+  login.classList.remove('divDisplayNone');
+  login.classList.add('divDisplayBlock');
 })
 
 const btnAdmi = document.getElementById('btn1').addEventListener('click', ()=>{
   primera.classList.remove('divDisplayBlock');
   primera.classList.add('divDisplayNone');
-  loginAdministracion.classList.remove('divDisplayNone');
-  loginAdministracion.classList.add('divDisplayBlock');
+  administracion.classList.remove('divDisplayNone');
+  administracion.classList.add('divDisplayBlock');
 })
 
 const btnOk = document.getElementById('boton').addEventListener('click', ()=>{
-  recepcion.classList.remove('divDisplayBlock');
-  recepcion.classList.add('divDisplayNone');
+  login.classList.remove('divDisplayBlock');
+  login.classList.add('divDisplayNone');
   primera.classList.remove('divDisplayNone');
   primera.classList.add('divDisplayBlock');
 })
+
 
 
 /*//crear registro para admi
