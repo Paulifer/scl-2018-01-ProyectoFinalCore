@@ -17,3 +17,9 @@ img{
 #btnRegistry{
     width: 20%;
 }
+.divDisplayNone{
+	display: none;
+}
+.divDisplayBlock{
+	display: block;
+}
