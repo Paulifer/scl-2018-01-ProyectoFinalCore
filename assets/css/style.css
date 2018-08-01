@@ -38,6 +38,46 @@ h2{
 .custom-select{
     height: 10%;
 }
+/*administracion*/
+#administracion{
+    background-color:black;
+}
+.logo{
+background-size: 0%;
+}
+.nav-link{
+    margin-left: 20%;
+    font-size: 200%;
+}
+.adm{
+    margin-left: 15%;
+}
+.cerrar{
+    margin-left: 15%;
+}
+/*Estilos para la seccion de busqueda*/
+.busqueda{
+width: 100%;
+height: 80%;
+background-image:url("../img/R7A4124.jpg");
+background-repeat: no-repeat;
+background-size: 100%;
+padding: 30%;
+}
+.form-inline{
+  margin-right: 20%;
+}
+.btn{
+margin-top: 3%;
+width: 20%;
+margin-left: 40%;
+}
+/*Estilo para tabla*/
+.table{
+margin-top: 0;
+background-color: white;
+}
+
 
 /*EVENTOS DE FOTO*/
 #startbutton{
@@ -74,3 +114,37 @@ h2{
 .form-control-sm{
   height: 1.8em;  
 }
+
+
+#adminstracion{
+    background-color:#CACACA;
+}
+.logo{
+background-size: 0%;
+}
+.nav-link{
+    margin-left: 20%;
+    font-size: 200%;
+}
+.form-control{
+    margin-top: 20%;
+    margin-left: 27%;
+}
+.cerrar{
+    margin-left: 15%;
+}
+#buscar{
+    margin-top: 30%;
+}
+.btn{
+    margin-top: 5%;
+    margin-left: 55%;
+    width: 30%;
+}
+.table{
+    margin-top: 20%;
+    background-color: white;
+}
+#logo{
+    margin-left: 40%;
+} 
