@@ -1,7 +1,25 @@
-
+.btn{
+    margin-top: 10%;
+}
 img{
     height: 90%;
 }
 .carousel{
+    margin-top: 5%;
+}
+.text-center{
     margin-top: 20%;
+}
+#btn2{
+    margin-top: 1%;
+    margin-bottom: 10%;
+}
+#btnRegistry{
+    width: 20%;
+}
+.divDisplayNone{
+	display: none;
+}
+.divDisplayBlock{
+	display: block;
 }

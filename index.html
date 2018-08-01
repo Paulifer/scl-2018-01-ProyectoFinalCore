@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +8,10 @@
     <link rel="stylesheet" href="bootstrap-4.1.1-dist/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-crossorigin="anonymous">
+    crossorigin="anonymous">
 </head>
-
 <body>
+  <!--primera pantalla-->
   <div id="primera">
     <div id="btn1">
       <button type="button" class="btn btn-link btn-dark">Administración</button>
@@ -23,75 +22,157 @@ crossorigin="anonymous">
     <div class="text-center" id="btn2">
       <button type="button" id="btnRegistry" class="btn btn-dark btn-lg">REGISTRATE AQUÍ</button>
     </div>
-  </div>
-
-  <!--login-->
-  <div id="login" class="divDisplayNone">
-    <input type="text" id="nombre" placeholder="Nombre Completo" class="form-control my-3">
-    <input type="text" id="rut" placeholder="RUT" class="form-control my-3">
-    <input type="text" id="email" placeholder="Email" class="form-control my-3">
-     <select id="motivo" class="custom-select">
-      <option selected>Motivo de Visita</option>
-      <option value="Proveedor">Proveedor</option>
-      <option value="Visitante">Visitante</option>
-      <option value="Otro motivo">otro motivo</option>
-    </select>
-    <select id="destino" class="custom-select">
-      <option selected>Empresa que visitas</option>
-      <option value="Elestudio">Elestudio</option>
-      <option value="Robotics Labs">Robotics Labs</option>
-      <option value="FDM">Fábrica de medios</option>
-      <option value="Café altura">Café altura</option>
-      <option value="Laboratoria">Laboratoria</option>
-      <option value="Mustakis">Fundacion mustakis</option>
-      <option value="Husares">Destileria Husares</option>
-      <option value="Aguaslab">Aguaslab</option>
-      <option value="Wildproyectchile">Wildproyectchile</option>
-      <option value="Deseis">Deseis</option>
-      <option value="cdi">cdi</option>
-      <option value="Tremenda">Tremenda</option>
-      <option value="Ilegal">Ilegal</option>
-    </select>
-   
-    <section id="camara">
-      <div class="col-md-6 offset-md-3">
-        <button id="startbutton"> Tomar foto
-          <i class="fas fa-camera"></i>
-        </button>
+  <!--Carrusel de la primera Pantalla-->
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="assets/img/ifblanco-1.jpg" alt="First slide">
       </div>
-      <div class="col-md-6 offset-md-3">
-        <video id="video"></video>
-      </div>
-      <div class="col-md-6 offset-md-3">
-        <canvas id="canvas"></canvas>
-      </div>
-      
-        <div class="col-md-6 offset-md-3">
-          <div id="photo"></div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="assets/img/ifblanco-2.jpg" alt="Second slide">
         </div>
-
-</section>
-    
-    
-    <button class="btn btn-info btn-dark" onclick="guardar()" id="boton">REGISTRARME</button>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="assets/img/ifblanco-3.jpg" alt="Third slide">
+        </div>
+      </div>
+    </div>
   </div>
-
-
-  <div id="administracion" class="divDisplayNone">
-    <table id="table" class="table my-3">
-      <thead>
-        <tr>
-          <th scope="col">Hora</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Apellido</th>
-          <th scope="col">Destino</th>
-        </tr>
-      </thead>
-      <tbody id="tabla">
-      </tbody>
-    </table>
+<!--.....................pagina de recepcion.................-->
+  <div class="container formu divDisplayNone" id="recepcion">
+    <div class="row justify-content-md-center">
+      <div class="col-ls-auto">
+          <h2>Registro</h2>
+        <input type="text" id="nombre" placeholder="Nombre completo" class="form-control my-3" size="90%;" style="margin-top: 30%;">
+        <input type="text" id="rut" placeholder="RUT" class="form-control my-3">
+        <input type="text" id="email" placeholder="Email" class="form-control my-3">
+        <input type="text" id="ocupacion" placeholder="Ocupacion" class="form-control my-3">
+        <input type="text" id="patente" placeholder="Patente de tu auto" class="form-control my-3">  
+        <select id="destino" class="custom-select">
+            <option selected>Empresa que visitas</option>
+            <option value="Visita">Visita</option>
+            <option value="Elestudio">Elestudio</option>
+            <option value="Robotics Labs">Robotics Labs</option>
+            <option value="FDM">Fábrica de medios</option>
+            <option value="Café altura">Café altura</option>
+            <option value="Laboratoria">Laboratoria</option>
+            <option value="Mustakis">Fundacion mustakis</option>
+            <option value="Husares">Destileria Husares</option>
+            <option value="Aguaslab">Aguaslab</option>
+            <option value="Wildproyectchile">Wildproyectchile</option>
+            <option value="Deseis">Deseis</option>
+            <option value="cdi">cdi</option>
+            <option value="Tremenda">Tremenda</option>
+            <option value="Ilegal">Ilegal</option>
+        </select>
+        <!--sector de camara-->
+        <section id="camara">
+          <div class="col-ls-6 offset-ls-3">
+            <button id="startbutton"> Tomar foto
+              <i class="fas fa-camera"></i>
+            </button>
+          </div>
+          <div class="col-md-6 offset-md-3">
+            <video id="video"></video>
+          </div>
+          <div class="col-md-6 offset-md-3">
+            <canvas id="canvas"></canvas>
+          </div>
+          <div class="col-md-6 offset-md-3">
+            <div id="photo"></div>
+          </div>
+        </section>
+          <!--sector donde va boton de entrar-->
+          <button class="btn btn-info btn-dark" onclick="guardar()" id="boton">REGISTRARME</button>
+    </div> 
+    </div>
+    <div class="container">
+        <div class="row"> 
+          <div class="col-ls-6">
+            <img src="assets/img/ifblanco.png" alt="" srcset="">
+          </div> 
+        </div>
+      </div>
   </div>
+  <!--Logo del if-->
+  
+  <!---------Cierre pagina recepcion------->
+ 
+  <!---------Pagina Administracion------>
+  |
+    <div class="container divDisplayNone" id="loginAdministracion">
+      <div class="row justify-content-md-center">
+        <div class="col-lg-auto">
+          <img class="logo" src="assets/img/if-2.jpg" alt="" srcset="">
+        </div>
+      </div>
+    <div class="container login">
+      <div class="row justify-content-md-center">
+        <div class="col col-lg-6"></div>
+        <div class="col-md-auto">
+          <form>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" placeholder="Correo" id="email" size="70" style="height: 70px;">
+              </div>
+            </div>
+            <br>
+              <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="password" placeholder="Clave" style="height: 70px;">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-10">
+                  <button type="button" href="index.html" class="btn btn-secondary btn-lg btn-block p-3 mb-2 bg-dark text-white" id="btnEntrar" style="height: 70px;">Entrar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col col-lg-2"></div>
+      </div>
+    </div>
+    <section class="container-fluid">
+      <img src="assets/img/foto-1.jpg" alt="" srcset="" style="width: 100%">
+    </section>
+   </div> 
 
+    <!-----------Cierre pagina Administracion--------->
+    
+    <!-----------Sesión Administracion--------->
+    <div class="container divDisplayNone" id="administracion">
+      <!--barra de menu-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img class="logo"src="assets/img/if-2.jpg" alt="" srcset="" >
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="recep.html">Recepción</a>
+            </li>
+            <li class="nav-item adm">
+              <a class="nav-link" href="adm.html">Administración</a>
+            </li>
+            <li class="nav-item cerrar">
+              <a class="nav-link" href="inicio.html">Cerrar</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  <!--Barra de busqueda-->
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <form class="form-inline my-2 my-lg-0">
+          <input id="buscar"class="form-control mr-sm-2" type="search" placeholder="Search" >
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Buscar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+ 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -114,6 +195,7 @@ crossorigin="anonymous">
     </script>
     <script src="assets/js/registry.js"></script>
     <script src="assets/js/foto.js"></script>
+    <script src="assets/js/login.js"></script>
 </body>
 
 </html>

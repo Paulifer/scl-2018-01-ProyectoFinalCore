@@ -1,15 +1,11 @@
-#logo{
-	margin-top: 200px;
+/*primera pantalla*/
+img{
+    height: 90%;
 }
-#btn2{
-	margin-top: 50px;
+.carousel{
+    margin-top: 20%;
 }
 
-#btn1{
-  margin-left: 600px;
-  color: #010101;
-
-}
 .divDisplayNone{
 	display: none;
 }
@@ -20,7 +16,28 @@
 #login{
 	text-align: center;
 }
+/*Pagina Recepcion*/
+#recepcion{
+     background-color:#CACACA;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+.formu{
 
+    margin-top: 20%;
+    width: 70%;
+}
+h2{
+    text-align: center;
+    margin-bottom: 10%;
+}
+.form-control{
+    height:7%;
+    margin-bottom: 20%;
+}
+.custom-select{
+    height: 10%;
+}
 
 /*EVENTOS DE FOTO*/
 #startbutton{
