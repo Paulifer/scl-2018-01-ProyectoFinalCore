@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-4.1.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+    <!--....................................Pagina de bienvenida -->
+    <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-lg-auto">
+            <img class="logo" src="assets/img/if-2.jpg" alt="" srcset="">
+          </div>
+        </div>
+      </div>
+    <div class="container login">
+            <div class="row justify-content-md-center">
+              <div class="col col-lg-6">
+                
+              </div>
+              <div class="col-md-auto">
+                    <form>
+                            <div class="form-group row">
+                              <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
+                              <div class="col-sm-10">
+                                <input type="email" class="form-control" placeholder="Correo" id="email" size="70" style="height: 70px;">
+                              </div>
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                              <label for="inputPassword3" class="col-sm-2 col-form-label"></label>
+                              <div class="col-sm-10">
+                                <input type="password" class="form-control" id="password" placeholder="Clave" style="height: 70px;">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-sm-10">
+                                <button type="button" href="index.html" class="btn btn-secondary btn-lg btn-block p-3 mb-2 bg-dark text-white" id="btnEntrar" style="height: 70px;">Entrar</button>
+                              </div>
+                            </div>
+                          </form>
+              </div>
+              <div class="col col-lg-2">
+                
+              </div>
+            </div>
+            
+          </div>
+          <section class="container-fluid">
+              <img src="assets/img/foto-1.jpg" alt="" srcset="" style="width: 100%">
+          </section>
+
+    
+ 
+  
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCFFYaWllrV-XpRraCD9QclXIcJpPyvT7U",
+            authDomain: "registro-de-visitantes-e1722.firebaseapp.com",
+            databaseURL: "https://registro-de-visitantes-e1722.firebaseio.com",
+            projectId: "registro-de-visitantes-e1722",
+            storageBucket: "",
+            messagingSenderId: "680909247747"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="assets/js/login.js"></script>
+
+</body>
+
+</html>
