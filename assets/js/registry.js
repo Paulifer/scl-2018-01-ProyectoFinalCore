@@ -27,6 +27,7 @@ function guardar() {
   })
     .then(function (docRef) {
       console.log("Document written with ID: ", docRef.id);
+      alert('Has sido registrado');
       document.getElementById('nombre').value = '';
       document.getElementById('rut').value = '';
       document.getElementById('email').value = '';
@@ -41,21 +42,43 @@ function guardar() {
 
 // Imprimir visitantes
 const tabla = document.getElementById('tabla');
+const tablaAdm = document.getElementById('tablaGrande')
 
 db.collection("visitors").onSnapshot((querySnapshot) => {
-  tabla.innerHTML = '';
+  tablaAdm.innerHTML = '';
+  querySnapshot.forEach((doc) => {
+      console.log(`${doc.id} => ${doc.data()}`);
+      tablaAdm.innerHTML += `
+        <tr>
+          <th scope="row">${doc.data().date}</th>
+          <td>${doc.data().time}</td>
+          <td>${doc.data().first}</td>
+          <td>${doc.data().rut}</td>
+          <td>${doc.data().email}</td>
+          <td>${doc.data().ocupacion}</td>
+          <td>${doc.data().destino}</td>
+          <td>${doc.data().patente}</td>
+          <td></td>
+        </tr>`
+    });
+});
+
+db.collection("visitors").onSnapshot((querySnapshot) => {
+    tabla.innerHTML = '';
   querySnapshot.forEach((doc) => {
       console.log(`${doc.id} => ${doc.data()}`);
       tabla.innerHTML += `
       <tr>
-            <th scope="row">${doc.data().time}</th>
-            <td></td>
-            <td>${doc.data().first}</td>
-            <td>${doc.data().destino}</td>
-          </tr>`
-
+          <th scope="row">${doc.data().time}</th>
+          <td></td>
+          <td>${doc.data().first}</td>
+          <td>${doc.data().destino}</td>
+        </tr>`
     });
 });
+
+
+
 //botones 
 const btnregistro = document.getElementById('btnRegistry').addEventListener('click', ()=>{
   primera.classList.remove('divDisplayBlock');
