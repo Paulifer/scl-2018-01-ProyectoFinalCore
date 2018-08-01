@@ -33,39 +33,41 @@
       </nav>
   
   <!--Barra de busqueda-->
-  <div class="container">
-    <div class="row justify-content-md-center">
-     
-      <form class="form-inline my-2 my-lg-0">
-        <input id="buscar"class="form-control mr-sm-2" type="search" placeholder="Search" >
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Buscar</button>
-      </form>
-     
-    </div>
-   
-  </div>
-
-  <!-- Tabla de administracion -->
-  <div id="administracion" class="divDisplayNone">
+      <div class="container">
+              <div class="row">
+                <div class="col-ls-6">
+                      <div class="row justify-content-md-center">
+                              <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" size="70%;" style="height: 15%">
+                                <button type="button" class="btn btn-secondary btn bg-dark text-white ">Buscar</button>
+                              </form>
+                            </div>
+                  </div>
+<!--Tabla dos-->
+<div style="height: 600px; width: 100%; overflow-y: auto; margin-top: 15%;">
     <table id="table" class="table my-3">
-      <thead>
-        <tr>          
-          <th scope="col">Fecha</th>
-          <th scope="col">Hora</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Rut</th>
-          <th scope="col">Email</th>
-          <th scope="col">Ocupacion</th>
-          <th scope="col">Destino</th>
-          <th scope="col">Patente</th>
-          <th scope="col">Foto</th>
-        </tr>
-      </thead>
-      <tbody id="tablaGrande">
-      </tbody>
+            <thead>
+                <tr>
+                    <th scope="col">Hora</th>
+                    <th scope="col">Foto</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Rut</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Ocupacion</th>
+                    <th scope="col">Destino</th>
+                    <th scope="col">Patente</th>
+                    <th scope="col">Foto</th>
+                </tr>
+            </thead>
+            <tbody id="tabla">
+            </tbody>
     </table>
-  </div>
-
+    </div>
+    
+<!--Logo-->
+    <div class="text-center" id="logo">
+    <img src="assets/img/ifblanco.png" class="rounded" alt="...">
+    </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 crossorigin="anonymous"></script>

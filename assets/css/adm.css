@@ -1,5 +1,5 @@
 body{
-    background-color: #F5DF58;
+    background-color:#CACACA;
 }
 .logo{
 background-size: 0%;
@@ -8,8 +8,9 @@ background-size: 0%;
     margin-left: 20%;
     font-size: 200%;
 }
-.adm{
-    margin-left: 15%;
+.form-control{
+    margin-top: 20%;
+    margin-left: 27%;
 }
 .cerrar{
     margin-left: 15%;
@@ -18,5 +19,14 @@ background-size: 0%;
     margin-top: 30%;
 }
 .btn{
-    margin-top: 30%;
+    margin-top: 5%;
+    margin-left: 55%;
+    width: 30%;
+}
+.table{
+    margin-top: 20%;
+    background-color: white;
+}
+#logo{
+    margin-left: 40%;
 }
